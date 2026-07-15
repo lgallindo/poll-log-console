@@ -1,0 +1,29 @@
+<div class="dos-console" :class="console.minimized ? 'is-minimized' : ''"
+     @click="if (console.minimized) console.minimized = false">
+  <div class="dos-header" @click.stop="console.minimized = !console.minimized">
+    <div class="dos-header-left">
+      <div class="notif-light" :class="console.notifClass"></div>
+      <span x-show="!console.minimized" x-text="title"></span>
+      <span x-show="console.minimized">C:\</span>
+    </div>
+    <div class="dos-header-actions" x-show="!console.minimized">
+      <button type="button" @click.stop="copyConsole()" title="Copy Logs">📋</button>
+      <button type="button" @click.stop="clearConsole()" title="Clear Logs">🗑️</button>
+      <span>[-]</span>
+    </div>
+  </div>
+  <div class="dos-body" id="dos-body" x-show="!console.minimized">
+    <template x-for="(log, index) in console.logs" :key="index">
+      <div class="dos-line">
+        <span class="dos-line-time" x-text="log.time"></span>
+        <span :class="'dos-msg-' + log.type" x-text="log.msg"></span>
+      </div>
+    </template>
+    <div class="dos-prompt">
+      <span class="dos-prompt-gt">&gt;</span>
+      <input type="text" x-model="console.input"
+             @keydown.enter="onCommand()">
+      <div class="dos-cursor"></div>
+    </div>
+  </div>
+</div>

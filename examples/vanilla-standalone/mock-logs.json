@@ -1,0 +1,5 @@
+[
+  {"time": "12:00:00.000", "msg": "[REQ] GET /demo", "type": "req"},
+  {"time": "12:00:00.010", "msg": "[RES] 200 | 10.00ms", "type": "res"},
+  {"time": "12:00:01.000", "msg": "[SYS] Hello from mock feed", "type": "sys"}
+]

@@ -1,0 +1,121 @@
+/* dos-audit-console — pure CSS (no Tailwind required) */
+.dos-console {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  border: 2px solid #aaa;
+  box-shadow: 4px 4px 0 #555;
+  font-family: "Courier New", Courier, monospace;
+  color: #aaa;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 24rem;
+  max-width: calc(100vw - 2rem);
+}
+.dos-console.is-minimized {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dos-header {
+  background: #0000aa;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.dos-header-left,
+.dos-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dos-header button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+}
+.dos-header button:hover {
+  color: #fff;
+}
+.dos-body {
+  padding: 8px;
+  font-size: 11px;
+  overflow-y: auto;
+  max-height: 180px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #000;
+}
+.dos-line {
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
+}
+.dos-line-time {
+  opacity: 0.4;
+  margin-right: 0.25rem;
+}
+.dos-msg-req { color: #55ff55; }
+.dos-msg-res { color: #ffff55; }
+.dos-msg-sys { color: #fff; font-weight: bold; }
+.dos-msg-err { color: #ff5555; }
+.dos-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+.dos-prompt-gt { color: #666; }
+.dos-prompt input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #aaa;
+  font-family: inherit;
+  font-size: 11px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.dos-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  background: #aaa;
+  animation: dos-blink 1s infinite;
+}
+@keyframes dos-blink {
+  50% { opacity: 0; }
+}
+.notif-light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0 0 2px #000;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.notif-light.active {
+  background: #00ff00;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+.notif-light.error {
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+.dos-console[hidden],
+.dos-body[hidden] {
+  display: none !important;
+}

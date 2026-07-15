@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>lwan + dos-audit-console</title>
+  <link rel="stylesheet" href="/static/dos/dos-audit-console.css">
+</head>
+<body style="background:#111;color:#ccc;padding:2rem">
+  <h1>lwan static demo</h1>
+  <p>Copy <code>dist/</code> to <code>www/static/dos/</code> and point <code>logsUrl</code> at CGI.</p>
+  <div id="dos-root"></div>
+  <script src="/static/dos/dos-audit-console.iife.js"></script>
+  <script>
+    DosAuditConsole.mount('#dos-root', {
+      logsUrl: '/cgi-bin/logs.cgi',
+      pollMs: 3000
+    });
+  </script>
+</body>
+</html>

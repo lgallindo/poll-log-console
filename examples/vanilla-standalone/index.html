@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>dos-audit-console vanilla demo</title>
+  <link rel="stylesheet" href="../../dist/dos-audit-console.css">
+</head>
+<body style="background:#111;color:#ccc;font-family:sans-serif;padding:2rem">
+  <h1>Vanilla demo</h1>
+  <p>Mock logs via <code>mock-logs.json</code> if served by any static server.</p>
+  <div id="dos-root"></div>
+  <script src="../../dist/dos-audit-console.iife.js"></script>
+  <script>
+    DosAuditConsole.mount('#dos-root', {
+      logsUrl: './mock-logs.json',
+      infoUrl: null,
+      pollMs: 5000,
+      title: 'C:\\DEMO\\AUDIT_LOG.EXE'
+    });
+  </script>
+</body>
+</html>

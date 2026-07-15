@@ -1,0 +1,12 @@
+{
+  "name": "@research/dos-audit-console",
+  "version": "0.1.0",
+  "description": "Reusable PC-DOS audit / notification console (static-first)",
+  "main": "dist/dos-audit-console.iife.js",
+  "module": "src/js/index.js",
+  "files": ["dist", "src", "SPEC.md", "README.md"],
+  "license": "UNLICENSED",
+  "scripts": {
+    "build:dist": "cp src/css/dos-audit-console.css dist/ && echo 'IIFE maintained in dist/dos-audit-console.iife.js'"
+  }
+}
