@@ -9,6 +9,8 @@ sitelen li lukin sama ilo toki pi tenpo pini. ona li **ala** sama ilo CP/M anu D
 
 **ma GitHub:** `git@github.com:lgallindo/poll-log-console.git`
 
+![poll-log-console](docs/media/hero.png)
+
 ---
 
 ## wile
@@ -39,13 +41,13 @@ o lukin e [SPEC.md](SPEC.md) e [adapters/](adapters/).
 
 ## ilo ante (nanpa)
 
-| ilo | nasin | nanpa port | seme |
-|-----|-------|------------|------|
-| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | musi CP/M |
-| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | sona pi linja en ilo |
-| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | o pana e toki |
-| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css |
-| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css |
+| lukin | ilo | nasin | nanpa port | seme |
+|-------|-----|-------|------------|------|
+| ![CP/M term](docs/media/apps/thumbs/cpm-term.png) | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | musi CP/M |
+| ![Net status](docs/media/apps/thumbs/net-status.png) | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | sona pi linja en ilo |
+| ![Echo lab](docs/media/apps/thumbs/echo-lab.png) | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | o pana e toki |
+| ![Simple.css](docs/media/apps/thumbs/simple-css.png) | **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css |
+| ![Water.css](docs/media/apps/thumbs/water-css.png) | **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css |
 
 ### o open e ilo ante
 

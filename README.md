@@ -9,6 +9,8 @@ Theme nods to classic terminal chrome; the package does **not** emulate DOS/CP/M
 
 **GitHub:** `git@github.com:lgallindo/poll-log-console.git`
 
+![poll-log-console](docs/media/hero.png)
+
 ---
 
 ## Goals
@@ -39,13 +41,13 @@ See [SPEC.md](SPEC.md) and [adapters/](adapters/).
 
 ## Sample apps (index)
 
-| App | Path | Port | What it does |
-|-----|------|------|----------------|
-| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Toy CP/M prompt (`DIR`, `TYPE`, `HELP`); commands are audited |
-| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, addresses, platform, PID; refresh hits the log |
-| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST a message into the ring buffer + local toast/LED |
-| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console on a [Simple.css](https://simplecss.org/) page |
-| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console on a [Water.css](https://watercss.kognise.dev/) page |
+| Preview | App | Path | Port | What it does |
+|---------|-----|------|------|----------------|
+| ![CP/M term](docs/media/apps/thumbs/cpm-term.png) | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Toy CP/M prompt (`DIR`, `TYPE`, `HELP`); commands are audited |
+| ![Net status](docs/media/apps/thumbs/net-status.png) | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, addresses, platform, PID; refresh hits the log |
+| ![Echo lab](docs/media/apps/thumbs/echo-lab.png) | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST a message into the ring buffer + local toast/LED |
+| ![Simple.css](docs/media/apps/thumbs/simple-css.png) | **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console on a [Simple.css](https://simplecss.org/) page |
+| ![Water.css](docs/media/apps/thumbs/water-css.png) | **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console on a [Water.css](https://watercss.kognise.dev/) page |
 
 Also present (stubs): `examples/vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
 

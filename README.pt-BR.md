@@ -9,6 +9,8 @@ O visual lembra um terminal clássico; o pacote **não** emula DOS/CP/M sozinho.
 
 **GitHub:** `git@github.com:lgallindo/poll-log-console.git`
 
+![poll-log-console](docs/media/hero.png)
+
 ---
 
 ## Objetivos
@@ -39,13 +41,13 @@ Veja [SPEC.md](SPEC.md) e [adapters/](adapters/).
 
 ## Aplicativos de exemplo (índice)
 
-| App | Caminho | Porta | Função |
-|-----|---------|-------|--------|
-| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Prompt CP/M de brincadeira; comandos vão para o log |
-| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, endereços, plataforma, PID |
-| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST no buffer + toast/LED |
-| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console numa página [Simple.css](https://simplecss.org/) |
-| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console numa página [Water.css](https://watercss.kognise.dev/) |
+| Preview | App | Caminho | Porta | Função |
+|---------|-----|---------|-------|--------|
+| ![CP/M term](docs/media/apps/thumbs/cpm-term.png) | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Prompt CP/M de brincadeira; comandos vão para o log |
+| ![Net status](docs/media/apps/thumbs/net-status.png) | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, endereços, plataforma, PID |
+| ![Echo lab](docs/media/apps/thumbs/echo-lab.png) | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST no buffer + toast/LED |
+| ![Simple.css](docs/media/apps/thumbs/simple-css.png) | **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console numa página [Simple.css](https://simplecss.org/) |
+| ![Water.css](docs/media/apps/thumbs/water-css.png) | **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console numa página [Water.css](https://watercss.kognise.dev/) |
 
 Também existem stubs: `vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
 
