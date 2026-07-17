@@ -37,4 +37,4 @@ See `SPEC.md` and `adapters/*/README.md`.
 
 ## License
 
-Same as the originating research context unless otherwise stated.
+[GPL-3.0-or-later](LICENSE) — GNU General Public License v3.0 or later.

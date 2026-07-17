@@ -5,7 +5,7 @@
   "main": "dist/dos-audit-console.iife.js",
   "module": "src/js/index.js",
   "files": ["dist", "src", "SPEC.md", "README.md"],
-  "license": "UNLICENSED",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "build:dist": "cp src/css/dos-audit-console.css dist/ && echo 'IIFE maintained in dist/dos-audit-console.iife.js'"
   }
