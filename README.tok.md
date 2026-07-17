@@ -13,7 +13,7 @@ sitelen li lukin sama ilo toki pi tenpo pini. ona li **ala** sama ilo CP/M anu D
 
 ## wile
 
-- CSS en IIFE taso (sina ken kepeken e Alpine anu Tailwind, taso sina wile ala)
+- CSS en IIFE taso
 - ken lon Flask, FastAPI, Alpine, JS, HTMX, [lwan](https://lwan.ws/)
 - nasin JSON `LogEntry` · ken kepeken e `LogBuffer` pi toki Python
 
@@ -41,13 +41,16 @@ o lukin e [SPEC.md](SPEC.md) e [adapters/](adapters/).
 
 | ilo | nasin | nanpa port | seme |
 |-----|-------|------------|------|
-| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | musi CP/M (`DIR`, `TYPE`, `HELP`); toki li tawa lipu |
-| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | nimi ma, nanpa IP, systeme; open sin li tawa lipu |
-| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | o pana e toki tawa poki · kalama lili lon ilo |
+| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | musi CP/M |
+| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | sona pi linja en ilo |
+| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | o pana e toki |
+| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css (screenshot) |
+| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css (screenshot) |
 
-ilo ante li lon: `vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
+### nasin KISS — open tawa sitelen (screenshot)
 
-### nasin KISS — o open e ilo tu wan
+ilo open li awen tawa ni: sina ken **pali e sitelen pona**. ona li **ala** tawa
+mani pi CI anu nasa pi lawa lipu.
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn
@@ -58,19 +61,12 @@ chmod +x harness/run.sh
 o open e ni:
 
 - http://127.0.0.1:8771/ — CP/M  
-- http://127.0.0.1:8772/ — sona pi linja en ilo  
+- http://127.0.0.1:8772/ — sona pi linja  
 - http://127.0.0.1:8773/ — Echo lab  
+- http://127.0.0.1:8774/ — Simple.css  
+- http://127.0.0.1:8775/ — Water.css  
 
-wan taso:
-
-```bash
-cd examples/cpm-term && PYTHONPATH=../../src/python python3 app.py
-cd examples/net-status && PYTHONPATH=../../src/python python3 app.py
-cd examples/echo-lab && PYTHONPATH=../../src/python python3 app.py
-```
-
-sona mute: [harness/README.md](harness/README.md).  
-test taso li pini: `HARNESS_HOLD=0 ./harness/run.sh`
+sona mute: [harness/README.md](harness/README.md).
 
 ---
 
@@ -82,7 +78,7 @@ test taso li pini: `HARNESS_HOLD=0 ./harness/run.sh`
 | `dist/` | lipu tawa kepeken |
 | `adapters/` | sona pi nasin ante |
 | `examples/` | ilo ante |
-| `harness/` | open + test |
+| `harness/` | open tawa sitelen |
 | `tests/` | test |
 
 ## lipu lawa

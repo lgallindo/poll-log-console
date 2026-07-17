@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# KISS harness — start sample apps and smoke-check /api/v1/logs
+# Screenshot harness — keep demo apps alive so you can capture pretty shots.
+# Not a CI badge / repo-header gimmick runner.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 export PYTHONPATH="$ROOT/src/python${PYTHONPATH:+:$PYTHONPATH}"
@@ -17,15 +18,14 @@ trap cleanup EXIT
 
 need_py() {
   "$PY" -c "import fastapi, uvicorn" 2>/dev/null || {
-    echo "Install deps: $PY -m pip install fastapi uvicorn"
-    echo "Or: python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn"
+    echo "Install deps: python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn"
     exit 1
   }
 }
 
 start_app() {
   local name="$1" port="$2" script="$3"
-  echo "→ starting $name on :$port"
+  echo "→ $name  http://127.0.0.1:$port/"
   "$PY" "$script" >/tmp/plc-"$name".log 2>&1 &
   PIDS+=($!)
 }
@@ -34,32 +34,45 @@ wait_http() {
   local url="$1" n=0
   until curl -fsS "$url" >/dev/null 2>&1; do
     n=$((n + 1))
-    if [[ $n -gt 40 ]]; then
-      echo "timeout waiting for $url"
-      cat /tmp/plc-*.log 2>/dev/null | tail -40 || true
+    if [[ $n -gt 50 ]]; then
+      echo "timeout: $url"
+      tail -30 /tmp/plc-*.log 2>/dev/null || true
       return 1
     fi
-    sleep 0.25
+    sleep 0.2
   done
 }
 
 need_py
 
-start_app cpm-term 8771 "$ROOT/examples/cpm-term/app.py"
-start_app net-status 8772 "$ROOT/examples/net-status/app.py"
-start_app echo-lab 8773 "$ROOT/examples/echo-lab/app.py"
+start_app cpm-term      8771 "$ROOT/examples/cpm-term/app.py"
+start_app net-status    8772 "$ROOT/examples/net-status/app.py"
+start_app echo-lab      8773 "$ROOT/examples/echo-lab/app.py"
+start_app simple-css    8774 "$ROOT/examples/simple-css/app.py"
+start_app water-css     8775 "$ROOT/examples/water-css/app.py"
 
-wait_http "http://127.0.0.1:8771/api/v1/logs"
-wait_http "http://127.0.0.1:8772/api/v1/status"
-wait_http "http://127.0.0.1:8773/"
+for url in \
+  "http://127.0.0.1:8771/" \
+  "http://127.0.0.1:8772/" \
+  "http://127.0.0.1:8773/" \
+  "http://127.0.0.1:8774/" \
+  "http://127.0.0.1:8775/"
+do
+  wait_http "$url"
+done
 
 "$PY" "$ROOT/harness/smoke_test.py"
 
 echo
-echo "OK — apps running (Ctrl+C to stop):"
-echo "  CP/M term     http://127.0.0.1:8771/"
-echo "  Net status    http://127.0.0.1:8772/"
-echo "  Echo lab      http://127.0.0.1:8773/"
+echo "Screenshot gallery (leave running; Ctrl+C to stop):"
+echo "  CP/M term      http://127.0.0.1:8771/"
+echo "  Net status     http://127.0.0.1:8772/"
+echo "  Echo lab       http://127.0.0.1:8773/"
+echo "  Simple.css     http://127.0.0.1:8774/"
+echo "  Water.css      http://127.0.0.1:8775/"
+echo
+echo "Tips: expand console · trigger a button · capture full viewport"
+echo "Save shots under screenshots/ (gitignored) if you like."
 echo
 if [[ "${HARNESS_HOLD:-1}" == "1" ]]; then
   wait

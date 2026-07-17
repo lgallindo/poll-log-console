@@ -44,10 +44,15 @@ See [SPEC.md](SPEC.md) and [adapters/](adapters/).
 | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Toy CP/M prompt (`DIR`, `TYPE`, `HELP`); commands are audited |
 | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, addresses, platform, PID; refresh hits the log |
 | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST a message into the ring buffer + local toast/LED |
+| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console on a [Simple.css](https://simplecss.org/) page (screenshot) |
+| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console on a [Water.css](https://watercss.kognise.dev/) page (screenshot) |
 
-Also present (older stubs): `examples/vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
+Also present (stubs): `examples/vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
 
-### KISS — run the three showcase apps
+### KISS — screenshot harness
+
+The harness **keeps demos running so you can take pretty screenshots**. It is not
+for CI badges or repo-header gimmicks.
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn
@@ -55,11 +60,13 @@ chmod +x harness/run.sh
 ./harness/run.sh
 ```
 
-Then open:
+Then open (expand console → click something → capture viewport):
 
 - http://127.0.0.1:8771/ — CP/M  
 - http://127.0.0.1:8772/ — Net status  
 - http://127.0.0.1:8773/ — Echo lab  
+- http://127.0.0.1:8774/ — Simple.css  
+- http://127.0.0.1:8775/ — Water.css  
 
 Or one at a time:
 
@@ -67,10 +74,11 @@ Or one at a time:
 cd examples/cpm-term && PYTHONPATH=../../src/python python3 app.py
 cd examples/net-status && PYTHONPATH=../../src/python python3 app.py
 cd examples/echo-lab && PYTHONPATH=../../src/python python3 app.py
+cd examples/simple-css && PYTHONPATH=../../src/python python3 app.py
+cd examples/water-css && PYTHONPATH=../../src/python python3 app.py
 ```
 
-Harness details: [harness/README.md](harness/README.md).  
-CI-style (exit after smoke): `HARNESS_HOLD=0 ./harness/run.sh`
+Details: [harness/README.md](harness/README.md).
 
 ---
 
@@ -82,7 +90,7 @@ CI-style (exit after smoke): `HARNESS_HOLD=0 ./harness/run.sh`
 | `dist/` | Offline-ready CSS + IIFE |
 | `adapters/` | Notes per host (Flask, FastAPI, Alpine, Vanilla, HTMX, lwan) |
 | `examples/` | Sample applications |
-| `harness/` | Start + smoke-test showcase apps |
+| `harness/` | Start demos for screenshots (+ light health check) |
 | `tests/` | Unit + e2e notes |
 
 ## License
