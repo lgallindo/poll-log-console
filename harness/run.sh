@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Screenshot harness — keep demo apps alive so you can capture pretty shots.
-# Not a CI badge / repo-header gimmick runner.
+# Start sample apps and run a short health check.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 export PYTHONPATH="$ROOT/src/python${PYTHONPATH:+:$PYTHONPATH}"
@@ -64,15 +63,12 @@ done
 "$PY" "$ROOT/harness/smoke_test.py"
 
 echo
-echo "Screenshot gallery (leave running; Ctrl+C to stop):"
+echo "Running (Ctrl+C to stop):"
 echo "  CP/M term      http://127.0.0.1:8771/"
 echo "  Net status     http://127.0.0.1:8772/"
 echo "  Echo lab       http://127.0.0.1:8773/"
 echo "  Simple.css     http://127.0.0.1:8774/"
 echo "  Water.css      http://127.0.0.1:8775/"
-echo
-echo "Tips: expand console · trigger a button · capture full viewport"
-echo "Save shots under screenshots/ (gitignored) if you like."
 echo
 if [[ "${HARNESS_HOLD:-1}" == "1" ]]; then
   wait

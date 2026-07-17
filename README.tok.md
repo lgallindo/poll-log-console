@@ -44,21 +44,16 @@ o lukin e [SPEC.md](SPEC.md) e [adapters/](adapters/).
 | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | musi CP/M |
 | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | sona pi linja en ilo |
 | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | o pana e toki |
-| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css (screenshot) |
-| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css (screenshot) |
+| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css |
+| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css |
 
-### nasin KISS — open tawa sitelen (screenshot)
-
-ilo open li awen tawa ni: sina ken **pali e sitelen pona**. ona li **ala** tawa
-mani pi CI anu nasa pi lawa lipu.
+### nasin KISS — o open e ilo ante
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn
 chmod +x harness/run.sh
 ./harness/run.sh
 ```
-
-o open e ni:
 
 - http://127.0.0.1:8771/ — CP/M  
 - http://127.0.0.1:8772/ — sona pi linja  
@@ -78,7 +73,7 @@ sona mute: [harness/README.md](harness/README.md).
 | `dist/` | lipu tawa kepeken |
 | `adapters/` | sona pi nasin ante |
 | `examples/` | ilo ante |
-| `harness/` | open tawa sitelen |
+| `harness/` | open e lukin e ilo ante |
 | `tests/` | test |
 
 ## lipu lawa

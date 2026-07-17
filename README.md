@@ -44,23 +44,18 @@ See [SPEC.md](SPEC.md) and [adapters/](adapters/).
 | **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Toy CP/M prompt (`DIR`, `TYPE`, `HELP`); commands are audited |
 | **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, addresses, platform, PID; refresh hits the log |
 | **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST a message into the ring buffer + local toast/LED |
-| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console on a [Simple.css](https://simplecss.org/) page (screenshot) |
-| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console on a [Water.css](https://watercss.kognise.dev/) page (screenshot) |
+| **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | Console on a [Simple.css](https://simplecss.org/) page |
+| **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | Console on a [Water.css](https://watercss.kognise.dev/) page |
 
 Also present (stubs): `examples/vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
 
-### KISS — screenshot harness
-
-The harness **keeps demos running so you can take pretty screenshots**. It is not
-for CI badges or repo-header gimmicks.
+### KISS — run the sample apps
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn
 chmod +x harness/run.sh
 ./harness/run.sh
 ```
-
-Then open (expand console → click something → capture viewport):
 
 - http://127.0.0.1:8771/ — CP/M  
 - http://127.0.0.1:8772/ — Net status  
@@ -90,7 +85,7 @@ Details: [harness/README.md](harness/README.md).
 | `dist/` | Offline-ready CSS + IIFE |
 | `adapters/` | Notes per host (Flask, FastAPI, Alpine, Vanilla, HTMX, lwan) |
 | `examples/` | Sample applications |
-| `harness/` | Start demos for screenshots (+ light health check) |
+| `harness/` | Start and check sample apps |
 | `tests/` | Unit + e2e notes |
 
 ## License

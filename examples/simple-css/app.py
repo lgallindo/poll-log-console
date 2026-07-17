@@ -1,5 +1,5 @@
 """
-Simple.css demo site + poll-log-console (screenshot-friendly).
+Simple.css demo site + poll-log-console.
 KISS: PYTHONPATH=../../src/python python3 app.py  →  http://127.0.0.1:8774/
 """
 from __future__ import annotations
@@ -66,7 +66,7 @@ PAGE = """<!doctype html>
         typography, no custom design system, console still readable.
       </p>
       <aside>
-        Tip: expand the console, click Ping, then screenshot the full viewport.
+        Expand the console and click Ping to generate audited traffic.
       </aside>
       <h3 id="actions">Trigger traffic</h3>
       <p>

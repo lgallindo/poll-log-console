@@ -1,10 +1,6 @@
-# Screenshot harness
+# Harness
 
-**Purpose:** keep demo pages running so you can take **pretty screenshots** of
-poll-log-console on real layouts. It is **not** meant for CI badges, repo
-header widgets, or “funny” automated marketing hooks.
-
-## KISS
+Start the sample apps and run a short health check.
 
 ```bash
 python3 -m venv .venv
@@ -12,9 +8,6 @@ python3 -m venv .venv
 chmod +x harness/run.sh
 ./harness/run.sh
 ```
-
-Leaves five apps up until Ctrl+C. Open each URL, expand the console, trigger
-an action, then capture the viewport (browser or OS screenshot tool).
 
 | App | Port | URL |
 |-----|------|-----|
@@ -24,6 +17,4 @@ an action, then capture the viewport (browser or OS screenshot tool).
 | Simple.css | 8774 | http://127.0.0.1:8774/ |
 | Water.css | 8775 | http://127.0.0.1:8775/ |
 
-Optional local dump folder (ignored by git): `screenshots/`
-
-Exit after health check only: `HARNESS_HOLD=0 ./harness/run.sh`
+Exit after the health check: `HARNESS_HOLD=0 ./harness/run.sh`

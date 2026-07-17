@@ -1,5 +1,5 @@
 """
-Water.css demo site + poll-log-console (screenshot-friendly).
+Water.css demo site + poll-log-console.
 KISS: PYTHONPATH=../../src/python python3 app.py  →  http://127.0.0.1:8775/
 """
 from __future__ import annotations
@@ -56,7 +56,7 @@ PAGE = """<!doctype html>
     soft classless styling, dark-friendly defaults, console still fixed bottom-right.
   </p>
   <blockquote>
-    Good for side-by-side screenshots vs the Simple.css demo.
+    Soft classless styling with the audit console fixed bottom-right.
   </blockquote>
   <form id="f">
     <label for="t">Leave a note (audited)</label>

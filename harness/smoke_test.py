@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Quick health checks so the screenshot harness is actually up."""
+"""Health checks for sample apps started by harness/run.sh."""
 from __future__ import annotations
 
 import json
@@ -46,7 +46,7 @@ def main() -> int:
     if failed:
         print(f"{failed} failure(s)")
         return 1
-    print("ready for screenshots")
+    print("ok")
     return 0
 
 
