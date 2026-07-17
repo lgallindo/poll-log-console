@@ -1,7 +1,7 @@
 """
 Echo Lab — post messages into the audit ring + poll-log-console.
 (Chosen third sample: demonstrates host toast + middleware together.)
-KISS run:
+Run:
   cd examples/echo-lab && PYTHONPATH=../../src/python python3 app.py
   open http://127.0.0.1:8773/
 """

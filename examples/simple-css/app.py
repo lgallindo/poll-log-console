@@ -1,6 +1,6 @@
 """
 Simple.css demo site + poll-log-console.
-KISS: PYTHONPATH=../../src/python python3 app.py  →  http://127.0.0.1:8774/
+Run: PYTHONPATH=../../src/python python3 app.py  →  http://127.0.0.1:8774/
 """
 from __future__ import annotations
 

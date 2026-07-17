@@ -49,7 +49,7 @@ Veja [SPEC.md](SPEC.md) e [adapters/](adapters/).
 
 Também existem stubs: `vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
 
-### KISS — subir os exemplos
+### Subir os exemplos
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn

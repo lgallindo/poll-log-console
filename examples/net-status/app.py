@@ -1,6 +1,6 @@
 """
 Network & server status + poll-log-console.
-KISS run:
+Run:
   cd examples/net-status && PYTHONPATH=../../src/python python3 app.py
   open http://127.0.0.1:8772/
 """

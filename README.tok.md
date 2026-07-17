@@ -47,7 +47,7 @@ o lukin e [SPEC.md](SPEC.md) e [adapters/](adapters/).
 | **Simple.css** | [`examples/simple-css/`](examples/simple-css/) | **8774** | sitelen lon Simple.css |
 | **Water.css** | [`examples/water-css/`](examples/water-css/) | **8775** | sitelen lon Water.css |
 
-### nasin KISS — o open e ilo ante
+### o open e ilo ante
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn

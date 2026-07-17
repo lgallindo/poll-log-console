@@ -1,6 +1,6 @@
 """
 CP/M terminal simulator + poll-log-console.
-KISS run:
+Run:
   cd examples/cpm-term && PYTHONPATH=../../src/python python3 app.py
   open http://127.0.0.1:8771/
 """
