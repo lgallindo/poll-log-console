@@ -1,7 +1,7 @@
 {
-  "name": "@research/dos-audit-console",
+  "name": "poll-log-console",
   "version": "0.1.0",
-  "description": "Reusable PC-DOS audit / notification console (static-first)",
+  "description": "Reusable HTTP poll log / audit console widget (static-first)",
   "main": "dist/dos-audit-console.iife.js",
   "module": "src/js/index.js",
   "files": ["dist", "src", "SPEC.md", "README.md"],

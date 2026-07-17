@@ -1,15 +1,23 @@
-# dos-audit-console
+# poll-log-console
 
-Reusable **PC-DOS audit / notification console** extracted from
-[philological-agents](https://bitbucket.org/hustles/philological-agents) `lab/index.html`.
+**Languages:** [English (en_US)](README.md) · [Português (pt_BR)](README.pt-BR.md) · [toki pona](README.tok.md)
+
+Reusable **HTTP poll-log / audit console** widget (static-first CSS + IIFE).  
+Theme nods to classic terminal chrome; the package does **not** emulate DOS/CP/M by itself.
+
+**License:** [GPL-3.0-or-later](LICENSE)
+
+**GitHub:** `git@github.com:lgallindo/poll-log-console.git`
+
+---
 
 ## Goals
 
-- Static-first: pure CSS + IIFE JS (no mandatory Alpine, Tailwind, or npm at runtime)
-- Importable into Flask, FastAPI (Jinja), Alpine.js, Vanilla JS, HTMX, and [lwan](https://lwan.ws/)
+- Pure CSS + IIFE JS (no mandatory Alpine, Tailwind, or npm at runtime)
+- Drop into Flask, FastAPI (Jinja), Alpine.js, vanilla JS, HTMX, and [lwan](https://lwan.ws/)
 - Shared `LogEntry` JSON contract + optional Python `LogBuffer` / middleware
 
-## Quick start (Vanilla)
+## Quick start (vanilla)
 
 ```html
 <link rel="stylesheet" href="dist/dos-audit-console.css">
@@ -25,16 +33,58 @@ Reusable **PC-DOS audit / notification console** extracted from
 </script>
 ```
 
-See `SPEC.md` and `adapters/*/README.md`.
+See [SPEC.md](SPEC.md) and [adapters/](adapters/).
+
+---
+
+## Sample apps (index)
+
+| App | Path | Port | What it does |
+|-----|------|------|----------------|
+| **CP/M term** | [`examples/cpm-term/`](examples/cpm-term/) | **8771** | Toy CP/M prompt (`DIR`, `TYPE`, `HELP`); commands are audited |
+| **Net status** | [`examples/net-status/`](examples/net-status/) | **8772** | Hostname, addresses, platform, PID; refresh hits the log |
+| **Echo lab** | [`examples/echo-lab/`](examples/echo-lab/) | **8773** | POST a message into the ring buffer + local toast/LED |
+
+Also present (older stubs): `examples/vanilla-standalone/`, `alpine-standalone/`, `flask-app/`, `fastapi-app/`, `htmx-poll/`, `lwan/`.
+
+### KISS — run the three showcase apps
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install fastapi uvicorn
+chmod +x harness/run.sh
+./harness/run.sh
+```
+
+Then open:
+
+- http://127.0.0.1:8771/ — CP/M  
+- http://127.0.0.1:8772/ — Net status  
+- http://127.0.0.1:8773/ — Echo lab  
+
+Or one at a time:
+
+```bash
+cd examples/cpm-term && PYTHONPATH=../../src/python python3 app.py
+cd examples/net-status && PYTHONPATH=../../src/python python3 app.py
+cd examples/echo-lab && PYTHONPATH=../../src/python python3 app.py
+```
+
+Harness details: [harness/README.md](harness/README.md).  
+CI-style (exit after smoke): `HARNESS_HOLD=0 ./harness/run.sh`
+
+---
 
 ## Layout
 
-- `src/` — source CSS, JS core + adapters, HTML fragments, Python package
-- `dist/` — offline-ready build artifacts (committed for research use)
-- `adapters/` — drop-in notes per host framework
-- `examples/` — minimal apps
-- `tests/` — unit + e2e (Playwright Group D port)
+| Path | Role |
+|------|------|
+| `src/` | CSS, JS core + adapters, HTML fragments, Python package |
+| `dist/` | Offline-ready CSS + IIFE |
+| `adapters/` | Notes per host (Flask, FastAPI, Alpine, Vanilla, HTMX, lwan) |
+| `examples/` | Sample applications |
+| `harness/` | Start + smoke-test showcase apps |
+| `tests/` | Unit + e2e notes |
 
 ## License
 
-[GPL-3.0-or-later](LICENSE) — GNU General Public License v3.0 or later.
+[GPL-3.0-or-later](LICENSE) — see also [COPYING.short](COPYING.short).

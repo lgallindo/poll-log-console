@@ -5,7 +5,7 @@ from typing import Any, Iterable
 
 
 class LogBuffer:
-    """Thread-unsafe ring buffer (same shape as philological lab.state.LOG_BUFFER)."""
+    """Thread-unsafe ring buffer (maxlen window for LogEntry dicts)."""
 
     def __init__(self, maxlen: int = 50) -> None:
         self._buf: deque[dict[str, Any]] = deque(maxlen=maxlen)

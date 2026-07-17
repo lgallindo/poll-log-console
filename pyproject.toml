@@ -1,7 +1,7 @@
 [project]
 name = "dos-audit"
 version = "0.1.0"
-description = "Python LogBuffer + Flask/FastAPI adapters for dos-audit-console"
+description = "Python LogBuffer + Flask/FastAPI adapters for poll-log-console"
 requires-python = ">=3.10"
 license = { text = "GPL-3.0-or-later" }
 dependencies = []

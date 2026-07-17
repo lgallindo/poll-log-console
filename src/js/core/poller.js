@@ -27,7 +27,7 @@ export function createPoller(store, hooks = {}) {
       if (!res.ok) return;
       const info = await res.json();
       const bootMsgs = (options.bootLines || [
-        '--- AGENTE FILOLOGICO BIOS v0.1 ---',
+        '--- POLL-LOG-CONSOLE BIOS v0.1 ---',
         `SERVER_TIME: ${info.server_time} (${info.timezone})`,
         `OS_DETECTED: ${info.os} | PORT: ${info.port}`,
         `API_KEY_STATE: ${info.api_key_status}`,
