@@ -1,0 +1,12 @@
+{
+  "name": "hardcopy-console",
+  "version": "0.1.0",
+  "description": "Reusable HTTP poll-log console widget — hardcopy history, not toasts (static-first)",
+  "main": "dist/hardcopy-console.iife.js",
+  "module": "src/js/index.js",
+  "files": ["dist", "src", "SPEC.md", "README.md"],
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build:dist": "cp src/css/hardcopy-console.css dist/ && echo 'IIFE maintained in dist/hardcopy-console.iife.js'"
+  }
+}
