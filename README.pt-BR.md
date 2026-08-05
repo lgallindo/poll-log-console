@@ -51,7 +51,7 @@ Sua app acrescenta linhas a um ring buffer. O widget chama `GET /api/v1/logs`, r
 {"time": "14:32:01.423", "msg": "[REQ] GET /health", "type": "req"}
 ```
 
-(`type` costuma ser `req`, `res`, `sys` ou `err` — ver [SPEC.md](SPEC.md).)
+(`type` costuma ser `req`, `res`, `sys` ou `err` — ver [SPEC.pt-BR.md](SPEC.pt-BR.md) · [en](SPEC.md) · [tok](SPEC.tok.md).)
 
 **Cliente:** entregue CSS + IIFE de `dist/`, monte num `div`, defina `logsUrl`:
 
@@ -131,7 +131,7 @@ Depois use o início rápido e o índice de exemplos abaixo.
 </script>
 ```
 
-Veja [SPEC.md](SPEC.md) e [adapters/](adapters/).
+Veja [SPEC.pt-BR.md](SPEC.pt-BR.md) ([en](SPEC.md) · [tok](SPEC.tok.md)) e [adapters/](adapters/).
 
 ---
 

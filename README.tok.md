@@ -51,7 +51,7 @@ ilo sina li pana e linja tawa poki sike (ring buffer). ilo ni li toki `GET /api/
 {"time": "14:32:01.423", "msg": "[REQ] GET /health", "type": "req"}
 ```
 
-(`type` li ken `req`, `res`, `sys`, anu `err` — o lukin e [SPEC.md](SPEC.md).)
+(`type` li ken `req`, `res`, `sys`, anu `err` — o lukin e [SPEC.tok.md](SPEC.tok.md) · [en](SPEC.md) · [pt-BR](SPEC.pt-BR.md).)
 
 **ilo toki:** o kepeken CSS en IIFE tan `dist/`, o open e `div`, o pana e `logsUrl`:
 
@@ -131,7 +131,7 @@ poka la o kepeken open lili en nanpa pi ilo ante.
 </script>
 ```
 
-o lukin e [SPEC.md](SPEC.md) e [adapters/](adapters/).
+o lukin e [SPEC.tok.md](SPEC.tok.md) ([en](SPEC.md) · [pt-BR](SPEC.pt-BR.md)) e [adapters/](adapters/).
 
 ---
 

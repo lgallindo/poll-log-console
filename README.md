@@ -51,7 +51,7 @@ Your app appends log lines to a ring buffer. The widget calls `GET /api/v1/logs`
 {"time": "14:32:01.423", "msg": "[REQ] GET /health", "type": "req"}
 ```
 
-(`type` is usually `req`, `res`, `sys`, or `err` — see [SPEC.md](SPEC.md).)
+(`type` is usually `req`, `res`, `sys`, or `err` — see [SPEC.md](SPEC.md) · [pt-BR](SPEC.pt-BR.md) · [tok](SPEC.tok.md).)
 
 **Client:** ship CSS + IIFE from `dist/`, mount on a `div`, set `logsUrl`:
 
@@ -131,7 +131,7 @@ Then use the quick start and sample index below.
 </script>
 ```
 
-See [SPEC.md](SPEC.md) and [adapters/](adapters/).
+See [SPEC.md](SPEC.md) ([pt-BR](SPEC.pt-BR.md) · [tok](SPEC.tok.md)) and [adapters/](adapters/).
 
 ---
 
